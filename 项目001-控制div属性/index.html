@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-06-02 17:50:02
- * @LastEditTime: 2020-06-02 18:40:36
+ * @LastEditTime: 2020-06-02 18:56:04
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
@@ -37,23 +37,41 @@
     </div>
     <div id="div1"></div>
     <script type="text/javascript">
+        //    
+        var changeStyle = function (elem, attr, value) {
+            elem.style[attr] = value;
+        }
+        
         window.onload = function () {
             var oBtn = document.getElementsByTagName("input");
             var oDiv = document.getElementById("div1");
             var oAtt = ["width", "height", "background", "display", "display"];
             var oVal = ["200px", "200px", "red", "none", "block"];
 
+            // 错误方法
+            // for (var j = o;j<oBtn.length;j++) {
+            //     oBtn[j].onclick = function() {
+            //         changeStyle(oDiv,oAtt[j],oVal[j]);
+            //     }
+            // }
+
+
             // 方法一
+            // 预先通过变量将索引值存储起来
             for (var i = 0; i < oBtn.length; i++) {
                 oBtn[i].index = i;
                 oBtn[i].onclick = function () {
+                    console.log(this.index);
+                    // 如果为重置按钮，则将其CSS属性置空
+                    // Element.style.cssText的值为行内样式的字符串
+                    // 因此，通过将其置空，即可清除其行内样式
+                    this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
                     changeStyle(oDiv, oAtt[this.index], oVal[this.index]);
                 }
             }
-        }
 
-        var changeStyle = function (elem, attr, value) {
-            elem.style[attr] = value;
+            // 方法二
+
         }
     </script>
 </body>
