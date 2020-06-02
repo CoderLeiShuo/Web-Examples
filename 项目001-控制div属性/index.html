@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-06-02 17:50:02
- * @LastEditTime: 2020-06-02 18:56:04
+ * @LastEditTime: 2020-06-02 18:58:21
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
@@ -59,6 +59,7 @@
             // 方法一
             // 预先通过变量将索引值存储起来
             for (var i = 0; i < oBtn.length; i++) {
+                // 为oBtn[i]对象添加index属性，存储其索引值
                 oBtn[i].index = i;
                 oBtn[i].onclick = function () {
                     console.log(this.index);
