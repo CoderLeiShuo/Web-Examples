@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-06-02 17:50:02
- * @LastEditTime: 2020-06-02 18:58:21
+ * @LastEditTime: 2020-06-02 21:57:48
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
         var changeStyle = function (elem, attr, value) {
             elem.style[attr] = value;
         }
-        
+
         window.onload = function () {
             var oBtn = document.getElementsByTagName("input");
             var oDiv = document.getElementById("div1");
@@ -72,7 +72,19 @@
             }
 
             // 方法二
-
+            // 使用闭包和立即执行函数
+            for (var i = 0; i < oBtn.length; i++) {
+                // 在循环中定义一个匿名的立即执行函数
+                // 这样，在循环时，将i传入函数中
+                // 每个函数都有其作用域
+                // 因此每个立即执行函数中的i都不一样
+                (function (i) {
+                    oBtn[i].onclick = function () {
+                        i == oBtn.length - 1 && (oDiv.style.cssText = "");
+                        changeStyle(oDiv, oAtt[i], oVal[i]);
+                    }
+                })(i); // 将循环时的i传入立即执行函数中
+            }
         }
     </script>
 </body>
