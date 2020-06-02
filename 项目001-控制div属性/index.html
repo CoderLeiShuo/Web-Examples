@@ -1,0 +1,61 @@
+<!--
+ * @Author: CoderLeiShuo
+ * @Description: 
+ * @version: 1.0.0
+ * @Date: 2020-06-02 17:50:02
+ * @LastEditTime: 2020-06-02 18:40:36
+ * @LastEditos: CoderLeiShuo
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制div属性</title>
+    <style>
+        .btn-group {
+            text-align: center;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            margin: 10px auto;
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-group">
+        <input type="button" value="变宽">
+        <input type="button" value="变高">
+        <input type="button" value="变色">
+        <input type="button" value="隐藏">
+        <input type="button" value="重置">
+    </div>
+    <div id="div1"></div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oBtn = document.getElementsByTagName("input");
+            var oDiv = document.getElementById("div1");
+            var oAtt = ["width", "height", "background", "display", "display"];
+            var oVal = ["200px", "200px", "red", "none", "block"];
+
+            // 方法一
+            for (var i = 0; i < oBtn.length; i++) {
+                oBtn[i].index = i;
+                oBtn[i].onclick = function () {
+                    changeStyle(oDiv, oAtt[this.index], oVal[this.index]);
+                }
+            }
+        }
+
+        var changeStyle = function (elem, attr, value) {
+            elem.style[attr] = value;
+        }
+    </script>
+</body>
+
+</html>
