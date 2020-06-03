@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "微软雅黑";
+    background-color:#2A2A2A;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.main {
+    width: 1200px;
+    height: 460px;
+    margin: 50px auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+/* banner部分开始 */
+.banner {
+    height: 460px;
+    width: 1200px;
+    background-image: url(../img/bg1.jpg);
+    overflow: hidden;
+    position: relative;
+}
+
+.slide1 {
+    background-image: url(../img/bg1.jpg);
+}
+
+.slide2 {
+    background-image: url(../img/bg2.jpg);
+}
+
+.slide3 {
+    background-image: url(../img/bg3.jpg);
+}
+
+.button {
+    position: absolute;
+    left: 244px;
+    /* top百分比相对于包含块 */
+    top: 50%;
+    width: 40px;
+    height: 80px;
+    margin-top: -40px;
+    background: url(../img/arrow.png) center center no-repeat;
+}
+
+.button:hover {
+    background-color: #333;
+    opacity: 0.6;
+    /* 兼容IE8及以下浏览器 */
+    filter: alpha(opacity=0.6);
+}
+
+.prev {
+    transform: rotate(180deg);
+}
+
+.next {
+    left: auto;
+    right: 0;
+}
+
+.dots {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    text-align: center;
+}
+
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background: rgba(7, 17, 27, 0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+    cursor: pointer;
+}
+
+.dots span.active {
+    box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+    background: #fff;
+}
+
+/* banner部分结束 */
+
+
+/* 主菜单开始 */
+/* 遮罩层 */
+.menu-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 244px;
+    height: 460px;
+    background-color: rgba(7, 17, 27, 0.5);
+    opacity: 0.5;
+}
+
+.menu-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 244px;
+    height: 454px;
+    padding-top: 6px;
+}
+
+.menu-item {
+    height: 64px;
+    line-height: 64px;
+    font-size: 16px;
+    padding: 0 24px;
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    /* height: 63px; */
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.menu-item a:hover {
+}
+
+@font-face {
+	font-family: "iconfont";
+	src: url("../img/font/iconfont.eot");
+	src: url("../img/font/iconfont.eot") format("embedded-opentype"),
+		url("../img/font/iconfont.woff") format("woff"),
+		url("../img/font/iconfont.tff") format("truetype"),
+		url("../img/font/iconfont.svg#iconfog") format("svg");
+}
+
+.menu-item i {
+    position: absolute;
+    top: 2px;
+    right: 32px;
+    font-size: 32px;
+    font-family: "iconfont";
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(255, 255, 255, .5);
+}
+/* 主菜单部分结束 */
