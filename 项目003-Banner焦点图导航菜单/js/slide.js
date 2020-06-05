@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-06-04 11:42:25
- * @LastEditTime: 2020-06-04 18:37:43
+ * @LastEditTime: 2020-06-05 19:59:01
  * @LastEditos: CoderLeiShuo
  */
 /**
@@ -126,9 +126,7 @@ subMenu.onmouseover = function () {
     this.className = "sub-menu";
 }
 
-// 注意，此处之前绑定成了onmousemove事件
-// 造成鼠标移入子菜单时，就隐藏的bug
-// 我误以为是主菜单和子菜单没有衔接好，才造成移出主菜单，子菜单就消失的现象
+
 subMenu.onmouseout = function () {
     console.log("移出子菜单");
     this.className = "sub-menu hide";
