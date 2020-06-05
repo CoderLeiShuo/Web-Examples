@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-06-03 15:50:32
- * @LastEditTime: 2020-06-03 17:38:33
+ * @LastEditTime: 2020-06-04 19:14:25
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
@@ -19,9 +19,9 @@
 <body>
     <div class="main" id="main">
         <!-- 轮播图 -->
-        <div class="banner">
+        <div class="banner" id="banner">
             <a href="">
-                <div class="banner-slide slide1"></div>
+                <div class="banner-slide slide1 slide_active"></div>
             </a>
             <a href="">
                 <div class="banner-slide slide2"></div>
@@ -29,22 +29,23 @@
             <a href="">
                 <div class="banner-slide slide3"></div>
             </a>
-            
-            <!-- 上下按钮 -->
-            <a href="javascript:void(0)" class="button prev"></a>
-            <a href="javascript:void(0)" class="button next"></a>
-            <!-- 圆点 -->
-            <div class="dots">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
 
-        <div class="menu-box"></div>
+        <!-- 上下按钮 -->
+        <a href="javascript:void(0)" class="button prev" id="prev"></a>
+        <a href="javascript:void(0)" class="button next" id="next"></a>
+        <!-- 圆点 -->
+        <div class="dots" id="dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-box">
+        </div>
 
         <!-- 主菜单 -->
-        <div class="menu-content">
+        <div class="menu-content" id="menu-content">
             <div class="menu-item">
                 <a href="">
                     <span>手机、配件</span>
@@ -72,8 +73,232 @@
         </div>
 
         <!-- 子菜单 -->
-        <div class="sub-menu"></div>
+        <div class="sub-menu hide" id="sub-menu">
+            <!-- 手机 -->
+            <div class="inner-box">
+                <div class="sub-inner-box">
+                    <div class="title">手机、配件</div>
+                    <div class="sub-row">
+                        <span>手机通讯：</span>
+                        <a href="#">手机</a>
+                        <span>/</span>
+                        <a href="#">游戏手机</a>
+                        <span>/</span>
+                        <a href="#">5G手机</a>
+                        <span>/</span>
+                        <a href="#">拍照手机</a>
+                        <span>/</span>
+                        <a href="#">全面屏手机</a>
+                        <span>/</span>
+                        <a href="#">老年机</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>手机配件：</span>
+                        <a href="#">手机壳</a>
+                        <span>/</span>
+                        <a href="#">贴膜</a>
+                        <span>/</span>
+                        <a href="#">数据线</a>
+                        <span>/</span>
+                        <a href="#">手机存储卡</a>
+                        <span>/</span>
+                        <a href="#">充电器</a>
+                        <span>/</span>
+                        <a href="#">手机耳机</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>运营商：</span>
+                        <a href="#">宽带</a>
+                        <span>/</span>
+                        <a href="#">手机卡</a>
+                        <span>/</span>
+                        <a href="#">充话费</a>
+                        <span>/</span>
+                        <a href="#">中国电信</a>
+                        <span>/</span>
+                        <a href="#">中国移动</a>
+                        <span>/</span>
+                        <a href="#">中国联通</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 电脑 -->
+            <div class="inner-box">
+                <div class="sub-inner-box">
+                    <div class="title">电脑</div>
+                    <div class="sub-row">
+                        <span>电脑：</span>
+                        <a href="#">笔记本</a>
+                        <span>/</span>
+                        <a href="#">游戏本</a>
+                        <span>/</span>
+                        <a href="#">平板电脑</a>
+                        <span>/</span>
+                        <a href="#">台式机</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>电脑配件：</span>
+                        <a href="#">显示器</a>
+                        <span>/</span>
+                        <a href="#">CPU</a>
+                        <span>/</span>
+                        <a href="#">显卡</a>
+                        <span>/</span>
+                        <a href="#">硬盘</a>
+                        <span>/</span>
+                        <a href="#">内存</a>
+                        <span>/</span>
+                        <a href="#">机箱</a>
+                        <span>/</span>
+                        <a href="#">电源</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>外设产品：</span>
+                        <a href="#">鼠标</a>
+                        <span>/</span>
+                        <a href="#">键盘</a>
+                        <span>/</span>
+                        <a href="#">U盘</a>
+                        <span>/</span>
+                        <a href="#">移动硬盘</a>
+                        <span>/</span>
+                        <a href="#">鼠标垫</a>
+                        <span>/</span>
+                        <a href="#">摄像头</a>
+                        <span>/</span>
+                        <a href="#">音响</a>
+                        <span>/</span>
+                        <a href="#">耳机</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 家用电器 -->
+            <div class="inner-box">
+                <div class="sub-inner-box">
+                    <div class="title">家用电器</div>
+                    <div class="sub-row">
+                        <span>电视：</span>
+                        <a href="#">超薄电视</a>
+                        <span>/</span>
+                        <a href="#">全面屏电视</a>
+                        <span>/</span>
+                        <a href="#">智能电视</a>
+                        <span>/</span>
+                        <a href="#">OLED电视</a>
+                        <span>/</span>
+                        <a href="#">智慧屏</a>
+                        <span>/</span>
+                        <a href="#">4K超清电视</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>空调：</span>
+                        <a href="#">空调挂机</a>
+                        <span>/</span>
+                        <a href="#">空调柜机</a>
+                        <span>/</span>
+                        <a href="#">中央空调</a>
+                        <span>/</span>
+                        <a href="#">变频空调</a>
+                        <span>/</span>
+                        <a href="#">移动空调</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>洗衣机：</span>
+                        <a href="#">滚筒洗衣机</a>
+                        <span>/</span>
+                        <a href="#">迷你洗衣机</a>
+                        <span>/</span>
+                        <a href="#">波轮洗衣机</a>
+                        <span>/</span>
+                        <a href="#">烘干机</a>
+                        <span>/</span>
+                        <a href="#">洗衣机配件</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>冰箱：</span>
+                        <a href="#">多门</a>
+                        <span>/</span>
+                        <a href="#">对开门</a>
+                        <span>/</span>
+                        <a href="#">三门</a>
+                        <span>/</span>
+                        <a href="#">双门</a>
+                        <span>/</span>
+                        <a href="#">冷柜</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>生活电器：</span>
+                        <a href="#">电风扇</a>
+                        <span>/</span>
+                        <a href="#">冷扇</a>
+                        <span>/</span>
+                        <a href="#">空气净化器</a>
+                        <span>/</span>
+                        <a href="#">吸尘器</a>
+                        <span>/</span>
+                        <a href="#">饮水机</a>
+                        <span>/</span>
+                        <a href="#">加湿器</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 家具 -->
+            <div class="inner-box">
+                <div class="sub-inner-box">
+                    <div class="title">家具</div>
+                    <div class="sub-row">
+                        <span>灯具：</span>
+                        <a href="#">吸顶灯</a>
+                        <span>/</span>
+                        <a href="#">吊灯</a>
+                        <span>/</span>
+                        <a href="#">台灯</a>
+                        <span>/</span>
+                        <a href="#">落地灯</a>
+                        <span>/</span>
+                        <a href="#">节能灯</a>
+                        <span>/</span>
+                        <a href="#">装饰灯</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>家具：</span>
+                        <a href="#">床</a>
+                        <span>/</span>
+                        <a href="#">床垫</a>
+                        <span>/</span>
+                        <a href="#">衣柜</a>
+                        <span>/</span>
+                        <a href="#">茶几</a>
+                        <span>/</span>
+                        <a href="#">电视柜</a>
+                        <span>/</span>
+                        <a href="#">沙发</a>
+                        <span>/</span>
+                        <a href="#">书架</a>
+                        <span>/</span>
+                        <a href="#">办公桌</a>
+                    </div>
+                    <div class="sub-row">
+                        <span>全屋定制：</span>
+                        <a href="#">定制衣柜</a>
+                        <span>/</span>
+                        <a href="#">榻榻米</a>
+                        <span>/</span>
+                        <a href="#">橱柜</a>
+                        <span>/</span>
+                        <a href="#">门</a>
+                        <span>/</span>
+                        <a href="#">室内门</a>
+                        <span>/</span>
+                        <a href="#">窗</a>
+                        <span>/</span>
+                        <a href="#">防盗门</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="js/slide.js"></script>
 </body>
 
 </html>

@@ -5,11 +5,11 @@
 
 body {
     font-family: "微软雅黑";
-    background-color:#2A2A2A;
+    background-color: #2A2A2A;
 }
 
 a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
@@ -24,15 +24,23 @@ ul {
     margin: 50px auto;
     margin-bottom: auto;
     position: relative;
+    overflow: hidden;
 }
 
 /* banner部分开始 */
 .banner {
     height: 460px;
     width: 1200px;
-    background-image: url(../img/bg1.jpg);
     overflow: hidden;
     position: relative;
+}
+
+.banner-slide {
+    height: 460px;
+    width: 1200px;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
 }
 
 .slide1 {
@@ -45,6 +53,10 @@ ul {
 
 .slide3 {
     background-image: url(../img/bg3.jpg);
+}
+
+.slide_active {
+    display: block;
 }
 
 .button {
@@ -132,20 +144,23 @@ ul {
 
 .menu-item a {
     display: block;
-    /* height: 63px; */
+    color: #fff;
+    height: 63px;
+    padding: 0 8px;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
-.menu-item a:hover {
-}
+/* .menu-item a:hover {
+    color: #fff;
+} */
 
 @font-face {
-	font-family: "iconfont";
-	src: url("../img/font/iconfont.eot");
-	src: url("../img/font/iconfont.eot") format("embedded-opentype"),
-		url("../img/font/iconfont.woff") format("woff"),
-		url("../img/font/iconfont.tff") format("truetype"),
-		url("../img/font/iconfont.svg#iconfog") format("svg");
+    font-family: "iconfont";
+    src: url("../img/font/iconfont.eot");
+    src: url("../img/font/iconfont.eot") format("embedded-opentype"),
+        url("../img/font/iconfont.woff") format("woff"),
+        url("../img/font/iconfont.tff") format("truetype"),
+        url("../img/font/iconfont.svg#iconfog") format("svg");
 }
 
 .menu-item i {
@@ -158,4 +173,73 @@ ul {
     font-weight: normal;
     color: rgba(255, 255, 255, .5);
 }
+
 /* 主菜单部分结束 */
+
+
+/* 子菜单部分开始 */
+.sub-menu {
+    position: absolute;
+    width: 730px;
+    height: 458px;
+    border: 1px solid #d9dde1;
+    left: 244px;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1);
+}
+
+.inner-box {
+    width: 100%;
+    height: 100%;
+    background: url(../img/fe.png) no-repeat;
+    /* display: none; */
+}
+
+.sub-inner-box {
+    width: 652px;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+.title {
+    color: #f01414;
+    font-size: 20px;
+    line-height: 16px;
+    margin: 28px 0 30px 0;
+    font-weight: bold;
+}
+
+/* .bold {
+    font-weight: bold;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml20 {
+    margin-left: 20px;
+} */
+
+.hide {
+    display: none;
+}
+
+.sub-row {
+    margin: 15px 0;
+}
+
+.sub-row span:nth-child(1) {
+    font-weight: bold;
+}
+
+.sub-row span:not(:first-child) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sub-row a:hover {
+    color: #e2838a;
+}
+
+/* 子菜单部分结束 */
