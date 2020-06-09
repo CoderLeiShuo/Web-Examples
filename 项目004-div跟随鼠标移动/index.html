@@ -1,0 +1,68 @@
+<!--
+ * @Author: CoderLeiShuo
+ * @Description: 
+ * @version: 1.0.0
+ * @Date: 2020-06-09 16:31:53
+ * @LastEditTime: 2020-06-09 17:42:41
+ * @LastEditos: CoderLeiShuo
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div跟随鼠标移动</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            /* 开启绝对定位以后，可以通过设置top/right/left/bottom来控制元素的位置 */
+            position: absolute;
+        }
+        
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+    </style>
+    <script type="text/javaScript">
+        window.onload = function() {
+
+            document.onmousemove = function(event) {
+                // 处理兼容性问题
+                // IE8必须从window对象中获取event属性
+                event = event || window.event;
+                // 获取鼠标坐标
+                var left = event.clientX;
+                var top = event.clientY;
+                // console.log(left,top);
+
+                // 获取滚动条高度和宽度
+                // 前者document.body是混杂模式
+                // 后者document.documentElement是标准模式
+                var st = document.body.scrollTop || document.documentElement.scrollTop;
+                var sl = document.body.scrollLeft || document.documentElement.scrollLeft;
+
+                
+                // 犀牛书14.7
+                // 如果在HTML文档中用id属性来为元素命名，且Window对象没有此名字的属性
+                // 则Window对象会赋予一个属性，它的名字就是id属性的值，它们的值指向表示文档元素的HTMLElement对象
+                // div元素的id名为box1，可以通过box1全局变量来引用此元素
+                box1.style.left = left + sl +"px";
+                box1.style.top = top + st + "px";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box1"></div>
+</body>
+
+</html>
