@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    font-family: "Microsoft Yahei";
+    background: url(../images/bg.png) no-repeat top center;
+}
+
+
+/* 导航栏开始 */
+.top-nav {
+    background: #151515;
+    height: 47px;
+    line-height: 47px;
+}
+
+.nav-content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top-logo {
+    float: left;
+    padding-top: 5px;
+}
+
+.top-login {
+    float: right;
+    color: #5c5c5c;
+    background: url(../images/admin.jpg) no-repeat 0px 18px;
+    font-size: 8px;
+    padding-left: 10px;
+}
+
+.top-login a {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 5px;
+    margin-left: 5px;
+}
+/* 导航栏结束 */
+
+
+/* 九宫格开始 */
+.index-con {
+    width: 1000px;
+    height: 450px;
+    margin: 140px auto 0;
+}
+
+.index-con li {
+    width: 335px;
+    float: left;
+    margin: 0 10px 5px 0;
+}
+
+.index-con li a {
+    font-size: 30px;
+    color: #fff;
+    line-height: 63px;
+
+}
+
+.in-kct a {
+    height: 300px;
+    display: block;
+    text-align: center;
+}
+
+.in-kct a {
+    background: #b01e00;
+}
+/* 九宫格结束 */
