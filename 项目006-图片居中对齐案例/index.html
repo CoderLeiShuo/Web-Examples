@@ -1,0 +1,51 @@
+<!--
+ * @Author: CoderLeiShuo
+ * @Description: 
+ * @version: 1.0.0
+ * @Date: 2020-06-23 16:51:20
+ * @LastEditTime: 2020-06-23 18:12:13
+ * @LastEditos: CoderLeiShuo
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片居中对齐案例</title>
+    <style>
+        /* CSS reset */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            height: 400px;
+            min-width: 1000px;
+            background-image: url("./images/top_aec1ab4.jpg");
+            background-position: center -81px;
+        }
+
+        .box2 {
+            overflow: hidden;
+        }
+
+        .box2 img {
+            position: relative;
+            transform: translate(-50%);
+            margin-left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 将图片设置为背景实现居中 -->
+    <div class="box1"></div>
+
+    <div class="box2">
+        <img src="http://res.xyq.netease.com/pc/zt/20151119153357/images/top_aec1ab4.jpg" alt="">
+    </div>
+</body>
+
+</html>
