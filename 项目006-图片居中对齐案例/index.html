@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-06-23 16:51:20
- * @LastEditTime: 2020-06-23 18:12:13
+ * @LastEditTime: 2020-06-23 18:15:15
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
@@ -32,8 +32,11 @@
         }
 
         .box2 img {
+            /* 开启相对定位 */
             position: relative;
+            /* translate 百分比相对于元素本身 */
             transform: translate(-50%);
+            /* margin-left 百分比相对于包含块宽度  */
             margin-left: 50%;
         }
     </style>
@@ -43,6 +46,7 @@
     <!-- 将图片设置为背景实现居中 -->
     <div class="box1"></div>
 
+    <!-- 相对定位结合平移设置居中 -->
     <div class="box2">
         <img src="http://res.xyq.netease.com/pc/zt/20151119153357/images/top_aec1ab4.jpg" alt="">
     </div>
