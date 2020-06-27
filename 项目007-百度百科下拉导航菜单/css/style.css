@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial, tahoma, 'Microsoft Yahei', '\5b8b\4f53', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.nav-bar {
+    position: relative;
+    height: 45px;
+}
+
+.nav-bg {
+    background-color: #24619c;
+}
+
+.nav-top {
+    background-color: #459df5;
+}
+
+.nav-content {
+    position: absolute;
+}
