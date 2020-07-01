@@ -1,0 +1,138 @@
+/* 全局样式 */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    border: 0px;
+}
+
+
+.topbox {
+    min-width: 1200px;
+    height: 110px;
+    background: url(../img/top-bg.jpg);
+}
+
+.top {
+    width: 1200px;
+    height: 110px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 此处使用直接后代选择器：选择直接子代 */
+.top>a {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 80px;
+}
+
+.top-search {
+    position: absolute;
+    height: 60px;
+    width: 368px;
+    top: 30px;
+    left: 550px;
+}
+
+.top-search .search {
+    width: 365px;
+    height: 30px;
+    border: 2px solid #a62721;
+    border-radius: 15px;
+}
+
+.top-search .search .txt {
+    width: 260px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 20px;
+    color: #5f5f5e;
+    background: transparent;
+}
+
+.top-search .search .btn {
+    position: relative;
+    right: -1px;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    background-color: #a62721;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.top-search .keyword>span {
+    font-size: 12px;
+    color: #6e6e6e;
+}
+
+.top-language {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+}
+
+.top-language a {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+}
+
+.top-language a:hover {
+    color: red;   
+}
+
+.navbox {
+    width: 100%;
+    min-width: 1200px;
+    height: 50px;
+    background-color: #a62721;
+}
+
+.navbox .nav {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.navbox .nav>ul>li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-image:  url(../img/nav-bg.gif);
+    background-repeat: no-repeat;
+    background-position: -240px 0px;
+    transition: all 1s;
+}
+
+.navbox .nav>ul>li a {
+    display: block;
+    color: #fff;
+}
+
+.navbox .nav .navhover {
+    background-position: 0px 0px;
+}
