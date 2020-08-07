@@ -3,17 +3,78 @@
  * @Description:    
  * @version: 1.0.0
  * @Date: 2020-08-07 16:31:04
- * @LastEditTime: 2020-08-07 16:31:40
+ * @LastEditTime: 2020-08-07 19:09:35
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS天猫弹性导航菜单栏</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    <div id="nav">
+        <span id="t_mall"></span>
+        <ul>
+            <li>双11狂欢</li>
+            <li>服装会场</li>
+            <li>数码家电</li>
+            <li>家具建材</li>
+            <li>母婴童装</li>
+            <li>手机会场</li>
+            <li>美妆会场</li>
+            <li>进口会场</li>
+            <li>飞猪旅行</li>
+        </ul>
+    </div>
 </body>
+<script>
+    window.onload = function () {
+        // 1. 获取需要的元素
+        let nav = document.getElementById('nav');
+        let t_mall = nav.children[0];
+        let ul = nav.children[1];
+        let alllis = ul.children;
+
+        // 记录鼠标点击的位置
+        let beginX = 0;
+
+        // 2. 遍历
+        for (let i = 0; i < alllis.length; i++) {
+            let li = alllis[i];
+
+            // 2.1 监听鼠标进入
+            li.onmouseover = function () {
+                end = this.offsetLeft;
+            };
+
+            // 2.2 监听鼠标按下事件
+            li.onmousedown = function () {
+                beginX = this.offsetLeft;
+            }
+
+            // 2.3 监听鼠标离开事件
+            li.onmouseout = function () {
+                end = beginX;
+            }
+        }
+
+        // 3. 缓冲动画
+        let begin = 0,
+            end = 0;
+        setInterval(function () {
+            begin = begin + (end - begin) * 0.1;
+            t_mall.style.left = begin + 'px';
+        }, 10);
+
+        function $(id) {
+            return typeof id === 'string' ? document.getElementById(id) : null;
+        }
+    }
+</script>
+
 </html>

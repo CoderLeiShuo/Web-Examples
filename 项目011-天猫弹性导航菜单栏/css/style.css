@@ -1,0 +1,47 @@
+/* 清除默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 设置样式 */
+body {
+    background-color: pink;
+}
+
+#nav {
+    position: relative;
+    margin: 100px auto;
+    width: 900px;
+    height: 63px;
+    background: url('../images/doubleOne.png') no-repeat right center #fff;
+    border-radius: 5px;
+}
+
+#nav ul {
+    position: relative;
+}
+
+#nav ul li {
+    float: left;
+    /* inline-block会出现元素间间距 */
+    /* display: inline-block; */
+    width: 88px;
+    height: 63px;
+    line-height: 73px;
+    cursor: pointer;
+    text-align: center;
+    /* 便于观察 */
+    /* outline: 1px solid red; */
+}
+
+#t_mall {
+    position: absolute;
+    width: 88px;
+    height: 63px;
+    background: url('../images/tMall.png');
+}
