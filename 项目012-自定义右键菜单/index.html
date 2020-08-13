@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目012-自定义右键菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* outline: 1px solid red; */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .menu {
+            position: absolute;
+            width: 100px;
+            border: 1px solid #ccc;
+            /* box-shadow: 0px 0px 5px; */
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .menu li a {
+            display: block;
+            color: #555;
+            padding: 10px 0;
+        }
+
+        .menu li a:hover {
+            background-color: #c8c8c9;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul id="menu" class="menu">
+        <li><a href="#">复制</a></li>
+        <li><a href="#">剪切</a></li>
+        <li><a href="#">粘贴</a></li>
+        <li><a href="#">撤销</a></li>
+    </ul>
+
+    <script>
+        window.onload = function () {
+            let menu = $('#menu');
+
+            menu.style.display = 'none';
+
+            // 当点击页面其他地方，将隐藏右键菜单
+            document.onclick = function (e) {
+                menu.style.display = 'none';
+            }
+
+            menu.onclick = function () {
+
+            }
+
+            // 
+            document.oncontextmenu = function (e) {
+
+                let event = e || window.e;
+                let sTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+                // 获取鼠标位置
+                let left = event.clientX;
+                let top = event.clientY;
+                console.log(left, top);
+                e.cancelBubble = true;
+
+                menu.style.display = 'block';
+                menu.style.left = left + 'px';
+                menu.style.top = top + sTop + 'px';
+                return false;
+            }
+
+            function $(id) {
+                return document.querySelector(id);
+            }
+        }
+    </script>
+</body>
+
+</html>
