@@ -1,0 +1,28 @@
+body {
+    background-image: url(./images/banner.jpg);
+    background-repeat: no-repeat;
+}
+
+.main {
+    width: 35%;
+    margin: 10px auto;
+}
+
+.main>h1 {
+    color: #7e8fad;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.main input[type='text'] {
+
+    width: 96%;
+    padding: 15px 10px;
+    border: 1px solid #fff;
+    color: #7e8fad;
+    font-size: 1.3em;
+    background-color: #fed2ed;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+}
