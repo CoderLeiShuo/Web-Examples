@@ -1,0 +1,44 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.head_box {
+    height: 40px;
+    background-color: #333;
+}
+
+#head_wrap {
+    width: 1226px;
+    height: 40px;
+    margin: 0 auto;
+    color: #b0b0b0;
+    line-height: 40px;
+}
+
+#head_wrap a:hover {
+    color: #fff;
+}
+
+#head_nav {
+    float: left;
+    font-size: 12px;
+    text-align: center;
+}
+
+#head_nav a {
+    margin-left: 5px;
+}
+
+#head_right {
+    float: right;
+}
+
+#head_landing {
+    float: left;
+    margin-right: 15px;
+}
+
+#head_shopcart {
+    float: right;
+}
