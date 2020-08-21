@@ -1,0 +1,21 @@
+.top_wrap {
+    line-height: 36px;
+    background-color: #0a2d6b;
+    color: #ecf5f9;
+    font-size: 12px;
+}
+
+.top_wrap a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top_wrap .top {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top_wrap .top .corner {
+    float: right;
+}
+
