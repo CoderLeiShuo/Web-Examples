@@ -2,6 +2,7 @@ ul,
 li {
     /* ul有默认的40px的padding-left */
     padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
@@ -167,5 +168,55 @@ a {
 .navi7 a:hover {
     background: url('../image/nav7h.png') no-repeat left center;
 }
+
+.banner {
+    position: relative;
+    height: 197px;
+    overflow: hidden;
+}
+
+.banner img {
+    /* 重设图片的宽度 */
+    width: 100%;
+}
+
+.bd {
+    height: 100%;
+}
+
+.hd {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.hd ul {
+    text-align: center;
+    overflow: hidden;
+}
+
+.hd ul li {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 0 15px;
+    font-size: 0px;
+    line-height: 10px;
+    color: red;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.hd ul li.on {
+    background: #005d8c;
+    color: #005d8c;
+}
+
+
+
+
+
+
+
+
 
 /* 头部结束 */
