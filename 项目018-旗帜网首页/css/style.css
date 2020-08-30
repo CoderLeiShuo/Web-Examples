@@ -1,0 +1,171 @@
+ul,
+li {
+    /* ul有默认的40px的padding-left */
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 头部开始 */
+.header {
+    height: 176px;
+    background-color: #005d8c;
+}
+
+.headertop {
+    height: 134px;
+    border-bottom: 2px solid #f80;
+}
+
+.headfirst {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.logo {
+    padding: 10px 0;
+}
+
+.logo a {
+    display: block;
+}
+
+.search {
+    position: relative;
+    width: 260px;
+    height: 134px;
+    overflow: hidden;
+}
+
+.search_box {
+    position: absolute;
+    top: 80px;
+    width: 260px;
+    height: 38px;
+}
+
+.search_box>div {
+    position: absolute;
+    margin-left: 10px;
+    line-height: 38px;
+}
+
+.search_box>input {
+    float: left;
+    box-sizing: border-box;
+    padding-left: 30px;
+    width: 70%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 38px;
+    outline: none;
+}
+
+.search_box>button {
+    float: right;
+    box-sizing: border-box;
+    width: 30%;
+    height: 38px;
+    /* 消除button按钮的外边框 */
+    border: 0;
+    color: #fff;
+    background-color: #0075b3;
+    /* cursor: pointer; */
+}
+
+.search_box>button:hover {
+
+    background-color: #055bd0;
+}
+
+
+.naviul {
+    display: flex;
+    /* 两端对齐 */
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+    /* header占据136px,剩176px-136px=40px */
+    height: 40px;
+}
+
+.naviul>li:hover {
+    background: url('../image/shangjian.png') no-repeat 73% bottom;
+}
+
+.naviul>li:first-child:hover {
+    background: url('../image/shangjian.png') no-repeat 85% bottom;
+}
+
+.naviul li a {
+    display: block;
+    padding-left: 35px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.navi1 a {
+    background: url('../image/nav1.png') no-repeat left center;
+}
+
+.navi2 a {
+    background: url('../image/nav2.png') no-repeat left center;
+}
+
+.navi3 a {
+    background: url('../image/nav3.png') no-repeat left center;
+}
+
+.navi4 a {
+    background: url('../image/nav4.png') no-repeat left center;
+}
+
+.navi5 a {
+    background: url('../image/nav5.png') no-repeat left center;
+}
+
+.navi6 a {
+    background: url('../image/nav6.png') no-repeat left center;
+}
+
+.navi7 a {
+    background: url('../image/nav7.png') no-repeat left center;
+}
+
+.navi1 a:hover {
+    background: url('../image/nav1h.png') no-repeat left center;
+}
+
+.navi2 a:hover {
+    background: url('../image/nav2h.png') no-repeat left center;
+}
+
+.navi3 a:hover {
+    background: url('../image/nav3h.png') no-repeat left center;
+}
+
+.navi4 a:hover {
+    background: url('../image/nav4h.png') no-repeat left center;
+}
+
+.navi5 a:hover {
+    background: url('../image/nav5h.png') no-repeat left center;
+}
+
+.navi6 a:hover {
+    background: url('../image/nav6h.png') no-repeat left center;
+}
+
+.navi7 a:hover {
+    background: url('../image/nav7h.png') no-repeat left center;
+}
+
+/* 头部结束 */
