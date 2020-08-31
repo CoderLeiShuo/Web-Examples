@@ -3,7 +3,7 @@
  * @Description: 
  * @version: 1.0.0
  * @Date: 2020-08-30 12:20:38
- * @LastEditTime: 2020-08-31 15:20:05
+ * @LastEditTime: 2020-08-31 16:34:54
  * @LastEditos: CoderLeiShuo
 -->
 <!DOCTYPE html>
@@ -120,13 +120,69 @@
         <!-- 新闻中心开始 -->
         <div class="news">
             <div class="title">
-                <h2><a href="">新闻中心</a></h2>
-                <a href="#">+More</a>
+                <h2 class="left"><a href="">新闻中心</a></h2>
+                <a href="#" class="right more">+More</a>
             </div>
             <div class="contents">
+                <div class="contents_img left">
+                    <div class="bd">
+                        <ul>
+                            <li><a href="#"><img src="./image/xjp1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./image/xjp2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./image/xjp3.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./image/xjp4.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./image/xjp5.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="hd">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
 
+                </div>
+                <div class="list right">
+                    <ul>
+                        <li>
+                            <span>2019-11-26</span>
+                            <h3><a href="#">不忘初心，牢记使命”主题教育系列活动|校团委组织召开学...</a></h3>
+                        </li>
+                        <li>
+                            <span>2019-11-25</span>
+                            <h3><a href="#">“不忘初心，牢记使命”主题教育系列校团委书记阿古拉为民族...</a></h3>
+                        </li>
+                        <li>
+                            <span>2019-11-25</span>
+                            <h3><a href="#">大学生文化艺术活动月|系列主题团日活动——“我与祖国共奋...</a></h3>
+                        </li>
+                        <li>
+                            <span>2019-11-20</span>
+                            <h3><a href="#">不忘跟党初心牢记青春使命∣校团委邀请优秀校友宝林为我校师...</a></h3>
+                        </li>
+                        <li>
+                            <span>2019-11-20</span>
+                            <h3><a href="#">我校举办大学生第二届网络文化节系列活动之“博学慎思·明辩...</a></h3>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <script type="text/javascript">
+            $('.contents_img').slide({
+                titCell: '.hd ul',
+                mainCell: '.bd ul',
+                autoPlay: true,
+                autoPage: true
+            })
+        </script>
+        <!-- 新闻中心结束 -->
+        <!-- 院系传真开始 -->
+        
+        <!-- 院系传真结束 -->
     </div>
     <!-- 内容部分结束 -->
 

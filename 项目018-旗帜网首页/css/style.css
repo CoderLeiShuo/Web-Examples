@@ -206,7 +206,6 @@ a {
     padding: 0 15px;
     font-size: 0px;
     line-height: 10px;
-    color: red;
     background-color: #fff;
     cursor: pointer;
 }
@@ -247,6 +246,7 @@ a {
     filter: alpha(opacity=100);
     background-color: rgba(0, 0, 0, .5);
 }
+
 /* 头部结束 */
 
 
@@ -265,17 +265,102 @@ a {
 }
 
 .news .title {
+    height: 42px;
     line-height: 42px;
     border-bottom: 1px solid #e2e2e2;
 }
 
+.news .title h2 {
+    height: 54px;
+    background: url('../image/news_img1.png') no-repeat center 41px;
+}
 
-
-h2 {
-    float: left;
-    width: 132px;
-    font-size: 20px;
-    text-align: center;
+.title a {
     color: #005d8c;
 }
 
+
+
+.news .more {
+    font-size: 12px;
+}
+
+.news .contents {
+    margin-top: 28px;
+    margin-left: 13px;
+}
+
+.contents .contents_img {
+    position: relative;
+    width: 400px;
+}
+
+.news img {
+    height: 255px;
+    width: 100%;
+}
+
+
+
+.news .list {
+    height: 258px;
+}
+
+.news .list li {
+    width: 315px;
+    background-position: left 8px;
+}
+
+.news .list h3 {
+    width: 210px;
+}
+
+.news .list span {}
+
+
+
+
+
+
+
+
+
+
+
+/* 公共样式 */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+h2 {
+    width: 132px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.list li {
+    height: 40px;
+    padding: 6px 0 6px 14px;
+    border-bottom: 1px dashed #ccc;
+    background: url(../image/news_li.png) no-repeat;
+}
+
+.contents a {
+    color: #666;
+}
+
+.list h3 {
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.list span {
+    float: right;
+    font-size: 12px;
+}
