@@ -16,6 +16,12 @@ a {
     text-decoration: none;
 }
 
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
 /* 清除默认样式结束 */
 
 
@@ -38,11 +44,10 @@ a {
     border-bottom: 1px solid #e2e2e2;
 }
 
-.title h2 {
+h2 {
     float: left;
     width: 132px;
     font-size: 20px;
-    text-align: center;
     color: #005d8c;
 }
 
@@ -85,6 +90,10 @@ a {
     font-size: 12px;
 }
 
+.more:hover {
+    color: #f80;
+}
+
 .list li {
     height: 40px;
     padding: 6px 0 6px 14px;
@@ -106,6 +115,12 @@ a {
 .list span {
     float: right;
     font-size: 12px;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
 /* 公共样式结束 */
@@ -334,6 +349,7 @@ a {
 }
 
 .news .title h2 {
+    text-align: center;
     height: 54px;
     background: url('../image/news_img1.png') no-repeat center 41px;
 }
@@ -376,6 +392,7 @@ a {
 }
 
 .colleage h2 {
+    text-align: center;
     border-bottom: 2px solid #005d8c;
 }
 
@@ -386,4 +403,209 @@ a {
 .colleage .list li {
     padding-left: 31px;
     background-position: 17px 18px;
+}
+
+.teen,
+.campaign,
+.secondclass,
+.campaign_list {
+    margin-top: 37px;
+    padding: 0 14px;
+    width: 453px;
+    border: 1px solid #e2e2e2;
+}
+
+.teen .title,
+.campaign .title,
+.secondclass .title,
+.paper .title {
+    border-bottom: none;
+}
+
+.teen h2,
+.campaign h2,
+.secondclass h2 {
+    width: auto;
+    padding-left: 49px;
+    font-size: 18px;
+    background: url(../image/qnzs_img1.png) no-repeat left center;
+}
+
+.teen .more,
+.campaign .more,
+.secondclass .more,
+.paper .more,
+.work .more {
+    width: 20px;
+    height: 41px;
+    background: url(../image/qnzs_img2.png) no-repeat center;
+}
+
+.teen .more:hover,
+.campaign .more:hover,
+.secondclass .more:hover,
+.paper .more:hover,
+.work .more:hover {
+    background: url(../image/qnzs_img3.png) no-repeat center;
+}
+
+.teen .contents,
+.secondclass .contents {
+    margin-top: 22px;
+}
+
+.teen .contents p,
+.secondclass .contents p {
+    text-indent: 2em;
+    font-size: 14px;
+    color: #666;
+    line-height: 28px;
+}
+
+.campaign .contents {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    overflow: hidden;
+}
+
+.campaign .contents h3 {
+    position: absolute;
+    top: 192px;
+    background: #000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+.campaign .contents a {
+    color: #fff;
+}
+
+.campaign .contents a:hover {
+    color: #f80;
+}
+
+.campaign_list li {
+    background-position: left 8px;
+}
+
+.campaign_list .list h3 {
+    width: 335px;
+}
+
+.quick,
+.others {
+    margin-top: 37px;
+    width: 481px;
+}
+
+.quick h2,
+.others h2 {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.committee,
+.group {
+    box-sizing: border-box;
+    width: 481px;
+    padding: 0 15px;
+    border: 1px solid #e2e2e2;
+}
+
+.committee {
+    margin-top: 36px;
+    border-bottom: none;
+    border-bottom: 1px dashed #e2e2e2;
+}
+
+.group {
+    border-top: none;
+}
+
+.committee .title,
+.group .title {
+    height: 60px;
+    border-bottom: none;
+}
+
+.committee h3 {
+    background: url(../image/tw_img1.png) no-repeat left center;
+}
+
+.committee h3,
+.group h3 {
+    float: left;
+    padding-left: 39px;
+}
+
+.committee h3 a {
+    color: #1d1c1c;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.committee .more {
+    line-height: 60px;
+}
+
+.committee .contents_img,
+.group .contents_img {
+    width: 138px;
+}
+
+.committee .contents_word,
+.group .contents_word {
+    width: 290px;
+}
+
+.committee .contents_word {
+    text-indent: 2em;
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+}
+
+.paper .title,
+.work .title {
+    height: 36px;
+    line-height: 36px;
+}
+
+.group h3 {
+    background: url(../image/stu.png) no-repeat left center;
+}
+
+.group .contents_word li {
+    height: 20px;
+    padding-left: 14px;
+    background-position: left 11px;
+    border-bottom: none;
+}
+
+.group .contents_word a {
+    font-size: 14px;
+}
+
+.group .contents_word a:hover {
+    color: #f80;
+}
+
+.paper .contents,
+.work .contents {
+    font-size: 14px;
+    padding: 0 10px 0 15px;
+    border: 1px solid #e2e2e2;
+}
+
+.paper li,
+.work li {
+    line-height: 45px;
+    background-position: left 27px;
+}
+
+.work {
+    margin-top: 20px;
 }
