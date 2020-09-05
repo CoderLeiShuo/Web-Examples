@@ -1,0 +1,66 @@
+body {
+    /* 开启flex布局 */
+    display: flex;
+    /* 设置主轴对齐方式为居中对齐 */
+    justify-content: center;
+    /* 定义项目在交叉轴上的对齐方式 */
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f8f8;
+    font: normal 400 130%/1.5 -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+}
+
+a {
+    position: relative;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.4);
+    /* 变换 */
+    transition: color .3s, ease;
+}
+
+a::after {
+    /* 定义CSS变量 */
+    --scale: 0;
+    content: '';
+    position: absolute;
+    /* 绝对定位元素对立方向同时设置，将表现为格式化宽度，具有拉伸特性 */
+    left: 0;
+    right: 0;
+    /* 百分比相对于父元素高度 */
+    top: 100%;
+    height: 3px;
+    background: #4c81c9;
+    /* scale：缩放 */
+    transform: scale(var(--scale));
+    /* 兼容写法 */
+    -webkit-transform: scale(var(--scale));
+    /* 变换中心点 */
+    /* -webkit-transform-origin: var(--x) 50%;
+    transform-origin: var(--x) 50%; */
+    /* transition：过渡 */
+    /* 
+        第一个值：要过渡的CSS属性
+        第二个值：持续时间
+        第三个值：过渡效果函数
+        第四个值：延迟时间
+    */
+    /* transition: -webkit-transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1); */
+}
+
+a:hover {
+    color: #4c81c9;
+}
+
+a:hover::after {
+    /* 设置绽放比例为1 */
+    --scale: 1;
+}
