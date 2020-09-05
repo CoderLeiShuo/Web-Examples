@@ -16,7 +16,6 @@ a {
     text-decoration: none;
 }
 
-
 h2 {
     margin: 0;
     padding: 0;
@@ -341,6 +340,7 @@ h2 {
     margin: 20px auto 0;
 }
 
+/* 新闻中心开始 */
 .news {
     width: 760px;
     height: 340px;
@@ -352,6 +352,16 @@ h2 {
     text-align: center;
     height: 54px;
     background: url('../image/news_img1.png') no-repeat center 41px;
+}
+
+.news .title a:hover,
+.colleage .title a:hover,
+.teen .title a:hover,
+.campaign .title a:hover,
+.secondclass .title a:hover,
+.committee .title a:hover,
+.group .title a:hover {
+    color: #f80;
 }
 
 .news .contents {
@@ -382,6 +392,13 @@ h2 {
     width: 210px;
 }
 
+.news .list a:hover {
+    color: #f80;
+}
+
+/* 新闻中心结束 */
+
+/* 院系传真 */
 .colleage {
     width: 210px;
     border: 1px solid #e2e2e2;
@@ -405,6 +422,13 @@ h2 {
     background-position: 17px 18px;
 }
 
+.colleage .list a:hover {
+    color: #f80;
+}
+
+/* 院系传真结束 */
+
+/* 青年之声开始 */
 .teen,
 .campaign,
 .secondclass,
@@ -418,7 +442,8 @@ h2 {
 .teen .title,
 .campaign .title,
 .secondclass .title,
-.paper .title {
+.paper .title,
+.work .title {
     border-bottom: none;
 }
 
@@ -462,6 +487,10 @@ h2 {
     line-height: 28px;
 }
 
+/* 青年之声结束 */
+
+/* 五四运动开始 */
+
 .campaign .contents {
     position: relative;
     margin: 0 auto;
@@ -491,9 +520,15 @@ h2 {
     background-position: left 8px;
 }
 
+.campaign_list li a:hover {
+    color: #f80;
+}
+
 .campaign_list .list h3 {
     width: 335px;
 }
+
+/* 五四运动结束 */
 
 .quick,
 .others {
@@ -507,6 +542,7 @@ h2 {
     padding-left: 5px;
 }
 
+/* 团委介绍与学生组织开始 */
 .committee,
 .group {
     box-sizing: border-box;
@@ -541,7 +577,8 @@ h2 {
     padding-left: 39px;
 }
 
-.committee h3 a {
+.committee h3 a,
+.group h3 a {
     color: #1d1c1c;
     font-size: 16px;
     font-weight: normal;
@@ -568,6 +605,9 @@ h2 {
     line-height: 26px;
 }
 
+/* 团委介绍与学生组织结束 */
+
+/* 电子海报和工作指南开始 */
 .paper .title,
 .work .title {
     height: 36px;
@@ -608,4 +648,197 @@ h2 {
 
 .work {
     margin-top: 20px;
+}
+
+/* 电子海报和工作指南结束 */
+
+.paper a:hover,
+.work a:hover {
+    color: #f80;
+}
+
+/* 网上共青团开始 */
+.youth {
+    margin-top: 40px;
+}
+
+.youth .title,
+.special .title {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.youth h2,
+.special h2 {
+    border-bottom: 1px solid #005d8c;
+    text-align: center;
+}
+
+.youth .youth_slide,
+.special .special_slide {
+    position: relative;
+    margin-top: 11px;
+    width: 1000px;
+}
+
+.youth_slide li {
+    position: relative;
+    width: 233px;
+    height: 138px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.youth_hover {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    line-height: 138px;
+    background: #000;
+    opacity: 0.8;
+}
+
+.youth_slide li:hover .youth_hover {
+    display: block;
+}
+
+
+.youth_slide .prev,
+.special_slide .prev {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 宋体;
+    cursor: pointer;
+}
+
+.youth_slide .next,
+.special_slide .next {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 宋体;
+    cursor: pointer;
+}
+
+.special_slide .prev,
+.special_slide .next {
+    top: 35%;
+}
+
+.prev,
+.next {
+    opacity: 0.5;
+}
+
+.prev:hover,
+.next:hover {
+    opacity: 1;
+}
+
+.youth_hover h3 {
+    text-align: center;
+    background: url(../image/hover_gqt.png);
+}
+
+.youth_hover a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* 网上共青团结束 */
+
+/* 专题活动开始 */
+.special {
+    margin-top: 30px;
+}
+
+.special .bd {
+    overflow: hidden;
+}
+
+.special_slide li {
+    width: 300px;
+    height: 175px;
+    margin-right: 51px;
+}
+
+.special_hover {
+    display: none;
+    border: 1px solid #666;
+    border-top: none;
+    text-align: center;
+}
+
+.special_hover a {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+.special_slide a:hover {
+    color: #f80;
+}
+
+.special_slide li:hover .special_hover {
+    display: block;
+}
+
+/* 专题活动结束 */
+
+/* link 开始 */
+.link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.link div {
+    width: 300px;
+}
+
+.link img {
+    float: left;
+    margin-right: 13px;
+}
+
+.link a {
+    float: left;
+    font-size: 18px;
+    color: #0c76e2;
+}
+
+.link a:hover {
+    color: #f80;
+}
+
+/* link结束 */
+
+.foot {
+    margin-top: 50px;
+    border-top: 2px solid #0164ca;
+}
+
+.foot_top {
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 14px;
+    color: #757575;
+    text-align: center;
+}
+
+.foot .foot_bottom {
+    padding: 5px 20px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    background: #005d8c;
+    text-align: center;
 }
