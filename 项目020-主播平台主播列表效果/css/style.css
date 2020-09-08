@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+h1 {
+    margin: 40px auto;
+    font: 32px 'Microsoft Yahei';
+    text-align: center;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/*  */
+.wrapper {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.wrapper ul {
+    margin: -40px 0 0 -10px;
+}
+
+.wrapper li {
+    float: left;
+    margin: 40px 0 0 10px;
+}
+
+.wrapper .pic {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    /* 为了消除图片的底部空白 */
+    font-size: 0;
+    overflow: hidden;
+}
+
+.wrapper .pic img {
+    transform: scale(1.0);
+}
+
+.wrapper .pic:hover img {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+
+.wrapper .pic .follower {
+    position: absolute;
+    top: 172px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    background: #000;
+    font-size: 12px;
+    opacity: 0.4;
+    filter: alpha(opacity=40)
+}
+
+.wrapper .pic:hover .follower {
+    top: 0;
+    background: url(../images/play.png) no-repeat center #000;
+}
+
+.wrapper .follower span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display: inline-block;
+    padding-left: 22px;
+    background: url(../images/eye.png) no-repeat;
+}
+
+.wrapper .info {
+    margin-top: 10px;
+    height: 32px;
+}
+
+.wrapper .info a {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+}
+
+.wrapper .info .info-avater {
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.wrapper .info img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.wrapper .info .info-name {
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
