@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    outline: none;
 }
 
 h1 {
@@ -21,11 +20,15 @@ li {
     display: block;
 }
 
-
 /*  */
 .wrapper {
     width: 880px;
     margin: 0 auto;
+}
+
+/* 取消点击a标签以后产生的虚线边框 */
+.wrapper a {
+    outline: none;
 }
 
 .wrapper ul {

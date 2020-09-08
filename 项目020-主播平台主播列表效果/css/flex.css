@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 40px auto;
+    font: 32px 'Microsoft Yahei';
+    text-align: center;
+}
+
+/*  */
+body {
+    background: #e7e7e7;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1120px;
+}
+
+/* 取消点击a标签以后，出现的虚线边框 */
+.wrapper a {
+    outline: none;
+}
+
+.wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -40px 0 0 -10px;
+}
+
+.wrapper li {
+    margin: 40px 0 0 10px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.wrapper .pic {
+    position: relative;
+    display: block;
+    height: 250px;
+    overflow: hidden;
+}
+
+.wrapper .pic .pic-bg {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/play.png) no-repeat center #000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.wrapper .pic img {
+    width: 250px;
+}
+
+.wrapper .pic:hover .pic-bg {
+    display: block;
+}
+
+.wrapper .pic:hover img {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+
+.wrapper .info {
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    padding: 10px;
+}
+
+.info .info-avater {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.info .info-avater img {
+    width: 32px;
+    height: 32px;
+}
+
+.info .info-name {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.info .view {
+    line-height: 32px;
+    display: inline-block;
+    padding-left: 22px;
+    background: url(../images/eye.png) no-repeat left center;
+}
