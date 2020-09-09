@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #647df9;
+}
+
+h1 {
+    margin: 40px auto 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    /* 适配 */
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    /* 适配 */
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    /* 适配 */
+    -webkit-justify-content: center;
+    margin-bottom: 2em;
+}
+
+.pricing-item {
+    width: 330px;
+    margin: 1em -0.5em;
+    color: #84697c;
+    background: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(46, 59, 125, 0.23);
+    overflow: hidden;
+}
+
+.pricing-item-special {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pricing-item .pricing-deco {
+    padding-top: 4em;
+    background: rgba(76, 70, 101, 0.99);
+}
+
+.pricing-item .pricing-deco-img {
+    width: 100%;
+    height: 160px;
+    /* 消除svg图形底部空白 */
+    vertical-align: bottom;
+}
+
+.pricing-item .deco-layer {
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+
+.pricing-item:hover .deco-layer--1 {
+    transform: translateX(15px);
+    -webkit-transform: translateX(15px);
+}
+
+.pricing-item:hover .deco-layer--2 {
+    transform: translateX(-15px);
+    -webkit-transform: translateX(-15px);
+}
+
+.pricing-item .pricing-price {
+    margin-bottom: 0.25em;
+    line-height: 0.75;
+    font-size: 5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pricing-item .pricing-currency {
+    font-size: 0.15em;
+    vertical-align: top;
+}
+
+.pricing-item .pricing-period {
+    padding-left: 0.5em;
+    font-size: 0.15em;
+    font-style: italic;
+}
+
+.pricing-item .pricing-title {
+    color: #fff;
+    font-size: 0.75em;
+    letter-spacing: 5px;
+}
+
+.pricing-item .pricing-feature-list {
+    padding: 0.25em 0 2.5em;
+    list-style-type: none;
+}
+
+.pricing-item .pricing-feature {
+    padding: 1em 0;
+}
+
+.pricing-item .pricing-action {
+    width: 234px;
+    margin: auto 3em 2em 3em;
+    padding: 1em 2em;
+    color: #fff;
+    background: #4d4766;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pricing-item .pricing-action:hover {
+    background: #100a13;
+    transition: background 0.3s;
+}
+
+.pricing-item .pricing-action:focus {
+    outline: none;
+}
