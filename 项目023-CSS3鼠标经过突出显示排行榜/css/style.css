@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background: #eaeaea;
+    font-family: 'Microsoft Yahei';
+}
+
+.wrapper {
+    /* 开启网格布局 */
+    display: grid;
+    /* height: 100vh; */
+    /* align-items和justify-items的合并简写形式 */
+    place-items: center;
+    margin-top: 40px;
+}
+
+.leader-card {
+    width: 490px;
+    border-radius: 12px;
+    /* x偏移量|y偏移量|阴影模糊半径|阴影扩散半径|阴影颜色 */
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
+}
+
+.leader-card .header {
+    /* 自定义CSS3变量 */
+    position: relative;
+    --start: 15%;
+    height: 130px;
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(to right, #5b7cfa, #3659db);
+}
+
+.leader-card .header::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    background: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, #3659db 10%, #3659db 17%);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.leader-card .icon {
+    position: absolute;
+    left: var(--start);
+    top: 50%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    /* 填充svg图形颜色 */
+    fill: gold;
+}
+
+.leader-card .title {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--start)*.75);
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.main {
+    display: grid;
+    row-gap: 8px;
+    padding: 15px 15px 20px;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+.main .profile {
+    /* 开启grid布局 */
+    display: grid;
+    /* 设置比例1:3:1 */
+    grid-template-columns: 1fr 3fr 1fr;
+    /* 垂直居中 */
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+    transition: transform 0.5s cubic-bezier(0.7, 0.98, 0.86, 0.98),
+        box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.main .profile:hover {
+    transform: scale(1.2);
+    box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
+}
+
+.main .pic {
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ebeef3,
+        0 0 0 25px #f3f4f6;
+}
+
+.main .pic:nth-of-type(2n) {
+    transform: rotateY(180deg);
+}
+
+.main .name {
+    margin-left: 12px;
+    color: #979cb0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main .grage {
+    color: #35d8ac;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+}
