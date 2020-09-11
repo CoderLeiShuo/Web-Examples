@@ -52,7 +52,3 @@ body {
 .rating label:hover~label::before {
     opacity: 1;
 }
-
-.rating:hover input:checked~label::before {
-    opacity: 0;
-}
