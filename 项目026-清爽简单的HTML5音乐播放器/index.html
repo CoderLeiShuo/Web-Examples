@@ -1,0 +1,76 @@
+<!--
+ * @Author: CoderLeiShuo
+ * @Description: 
+ * @version: 1.0.0
+ * @Date: 2020-09-11 10:31:40
+ * @LastEditTime: 2020-09-11 16:39:27
+ * @LastEditos: CoderLeiShuo
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5音乐播放器</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/solid.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bg-artwork"></div>
+        <!-- 遮罩层 -->
+        <div class="bg-layer"></div>
+        <div class="player">
+            <!-- 音轨部分开始 -->
+            <div class="player-track" class="">
+                <div id="album-name">Me & You</div>
+                <div id="track-name">Alex Skrindo - Me & You</div>
+                <div id="track-time">
+                    <div id="current-time" class="left">00:00</div>
+                    <div id="track-length" class="right">03:18</div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time"></div>
+                    <div id="s-hover"></div>
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <!-- 音轨部分结束 -->
+            <!-- 控制面板部分开始 -->
+            <div class="player-content">
+                <!-- 唱片集部分开始 -->
+                <div class="album-art">
+                    <img class="active" src="./images/3.jpg" alt="">
+                </div>
+                <!-- 按钮部分开始 -->
+                <div class="player-controls">
+                    <div class="control">
+                        <div class="button" id="pre">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="pause">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- 按钮部分结束 -->
+            </div>
+            <!-- 控制面板部分结束 -->
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>
