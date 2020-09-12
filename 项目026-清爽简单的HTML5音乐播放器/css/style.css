@@ -151,8 +151,6 @@ body {
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
-
-
 .album-art::before {
     content: '';
     position: absolute;
@@ -167,10 +165,17 @@ body {
 }
 
 .album-art img {
+    position: absolute;
+    opacity: 0;
     width: 100%;
 }
 
-.album-art.active img.active{
+.album-art img.active {
+    opacity: 1;
+}
+
+
+.album-art.active img.active {
     -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
     animation: rotateAlbumArt 3s linear 0s infinite forwards;
 }
@@ -197,6 +202,44 @@ body {
         -webkit-transform: rotateZ(360deg);
         transform: rotateZ(360deg);
     }
+}
+
+#buffer-box {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 13px;
+    color: #1f1f1f;
+    font-size: 13px;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px;
+    margin: -12px auto 0 auto;
+    background-color: rgba(255, 255, 255, 0.19);
+    opacity: 0;
+    /* z-index: 2; */
+}
+
+.album-art img,
+#buffer-box {
+    transition: all 0.1s linear;
+}
+
+.album-art.buffering img {
+    opacity: 0.25;
+}
+
+.album-art.buffering img.active {
+    opacity: 0.8;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.album-art.buffering #buffer-box {
+    opacity: 1;
 }
 
 .player-content .player-controls {
