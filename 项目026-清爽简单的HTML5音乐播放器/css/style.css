@@ -87,41 +87,59 @@ body {
     overflow: hidden;
 }
 
-#track-time.active #current-time,
-#track-time.active #track-length {
-    color: #f86d92;
-    background: transparent;
-}
-
-
 #current-time,
 #track-length {
+    color: #f86d92;
     font-size: 11px;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
+
+
 
 #s-area {
     position: relative;
     height: 4px;
-}
-
-#s-area {
     background: #ffe8ee;
     cursor: pointer;
 }
 
 #ins-time {
     position: absolute;
+    top: -29px;
+    display: none;
     color: #fff;
+    background: #3b3d50;
     font-size: 12px;
+    border-radius: 4px;
     padding: 5px 6px;
 }
 
 #s-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0.2;
     background: #3b3d50;
 }
 
+#seek-bar {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #fd6d94;
+    transition: width 0.2s ease;
+}
 
+/* #volume {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #ffe8ee;
+}
+
+#volume-bar {} */
 
 .player-content {
     position: relative;
@@ -151,7 +169,7 @@ body {
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
-.album-art::before {
+.album-art::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -168,6 +186,7 @@ body {
     position: absolute;
     opacity: 0;
     width: 100%;
+    height: 100%;
 }
 
 .album-art img.active {
